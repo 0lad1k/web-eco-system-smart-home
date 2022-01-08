@@ -8,16 +8,20 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { RecomendationsPageComponent } from './recomendations-page/recomendations-page.component';
 import {RouterModule, Routes} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
+import { StateOfRoomComponent } from './state-of-room/state-of-room.component';
+import {MatCardModule} from "@angular/material/card";
 
 const appRoutes: Routes =[
   { path: 'recomendations', component: RecomendationsPageComponent},
+  {path: 'state-of-room', component: StateOfRoomComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarHederComponent,
-    RecomendationsPageComponent
+    RecomendationsPageComponent,
+    StateOfRoomComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,9 @@ const appRoutes: Routes =[
     BrowserModule,
     RouterModule.forRoot([
       {path: 'recomendations', component: RecomendationsPageComponent},
-  ]),
+      {path: 'state-of-room', component: StateOfRoomComponent}
+    ]),
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
