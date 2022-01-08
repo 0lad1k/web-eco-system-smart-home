@@ -17,10 +17,9 @@ export class StateOfRoomComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.http.get<any>('https://ecosystem-smart-home.herokuapp.com/RoomСondition?Id=1').subscribe(data => {
+    this.http.get<any>('https://ecosystem-smart-home.herokuapp.com/RoomСondition').subscribe(data => {
       this.temperature = data.temperature;
       this.humidity = data.humidity;
-      this.quantityCO = data.quantityCO;
     })
   }
 }
