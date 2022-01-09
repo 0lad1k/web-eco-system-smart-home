@@ -7,11 +7,6 @@
   <mat-card-title>Humidity:</mat-card-title>
   <mat-card-subtitle>{{roomInfo?.humidity}}</mat-card-subtitle>
 </mat-card>
-<!--<h1>{{roomst?.roomInfo?.[1]?.humidity}}</h1>-->
-<h1>{{roomInfo?.humidity}}</h1>
-<h1>{{roomst?.[0]?.temperature}}</h1>
-
-
 
 <google-chart *ngIf="data" #chart
               [title]="title"
