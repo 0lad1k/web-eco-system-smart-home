@@ -1,17 +1,26 @@
 <mat-card>
-  <mat-card-title>Temperature:</mat-card-title>
+  <mat-card-title>Остання виміряна температура:</mat-card-title>
   <mat-card-subtitle>{{roomInfo?.temperature}}</mat-card-subtitle>
 </mat-card>
 <br>
 <mat-card>
-  <mat-card-title>Humidity:</mat-card-title>
+  <mat-card-title>Остання виміряна вологість:</mat-card-title>
   <mat-card-subtitle>{{roomInfo?.humidity}}</mat-card-subtitle>
 </mat-card>
 
-<google-chart *ngIf="data" #chart
-              [title]="title"
+<google-chart *ngIf="dataTemperature" #chart
+              [title]="titleTemperature"
               [type]="type"
-              [data]="data"
+              [data]="dataTemperature"
+              [options]="options"
+              [width]="width"
+              [height]="height">
+</google-chart>
+
+<google-chart *ngIf="dataHumidity" #chart
+              [title]="titleHumidity"
+              [type]="type"
+              [data]="dataHumidity"
               [options]="options"
               [width]="width"
               [height]="height">
