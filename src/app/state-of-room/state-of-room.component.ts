@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import { formatDate } from '@angular/common';
 export interface roomInfoData {
   id: number,
   humidity: number,
@@ -34,9 +35,9 @@ export class StateOfRoomComponent implements OnInit {
     this.options = {
       colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'], is3D: true
     };
-    this.title ="roomInfo.humidity.toString()";
-    this.type ='PieChart';
-    this.columnNames = ['Browser', 'Percentage'];
+    this.title ="Температура в кімнаті";
+    this.type ='ColumnChart';
+    this.columnNames = ['Date', 'Temperature'];
     this.width = 500;
     this.height = 500;
   }
@@ -50,7 +51,7 @@ export class StateOfRoomComponent implements OnInit {
       this.roomst = data;
       // @ts-ignore
       this.data = data.map(d =>
-        ([d.dateLastCheckState, d.humidity])
+        ([  formatDate(d.dateLastCheckState, 'dd/MM/yyyy, HH:mm:ss', "en-US"), d.temperature])
       );
       console.log(this.data );
       console.log(data);
