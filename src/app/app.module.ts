@@ -10,6 +10,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
 import { StateOfRoomComponent } from './state-of-room/state-of-room.component';
 import {MatCardModule} from "@angular/material/card";
+import {GoogleChartsModule} from "angular-google-charts";
 
 const appRoutes: Routes =[
   { path: 'recomendations', component: RecomendationsPageComponent},
@@ -25,6 +26,7 @@ const appRoutes: Routes =[
   ],
   imports: [
     BrowserModule,
+    GoogleChartsModule,
     MatToolbarModule,
     AppRoutingModule,
     HttpClientModule,
