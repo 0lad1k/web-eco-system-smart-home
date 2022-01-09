@@ -21,21 +21,23 @@ export class StateOfRoomComponent implements OnInit {
 
 
   roomInfo: roomInfoData| undefined;
-  roomst : roomInfoData[] |  undefined;
-  PieChart: any;
-  data: any;
+  GraphTypo: any;
+  dataTemperature: any;
+  dataHumidity : any;
   options: any;
-  title: any;
+  titleTemperature: string;
+  titleHumidity: string;
   type: any;
   columnNames: any;
   width: any;
   height: any;
   constructor(private http: HttpClient) {
-    this.PieChart = "PieChart"
+    this.GraphTypo = "PieChart"
     this.options = {
       colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'], is3D: true
     };
-    this.title ="Температура в кімнаті";
+    this.titleTemperature ="Температура в кімнаті";
+    this.titleHumidity = "Вологість в кімнаті"
     this.type ='ColumnChart';
     this.columnNames = ['Date', 'Temperature'];
     this.width = 500;
@@ -47,15 +49,13 @@ export class StateOfRoomComponent implements OnInit {
       this.roomInfo = data;
     })
 
-    this.http.get<any>('https://ecosystem-smart-home.herokuapp.com/Room%D0%A1ondition/GetRoomStatistic').subscribe(data => {
-      this.roomst = data;
-      // @ts-ignore
-      this.data = data.map(d =>
-        ([  formatDate(d.dateLastCheckState, 'dd/MM/yyyy, HH:mm:ss', "en-US"), d.temperature])
+    this.http.get<roomInfoData[]>('https://ecosystem-smart-home.herokuapp.com/Room%D0%A1ondition/GetRoomStatistic').subscribe(data => {
+      this.dataTemperature = data.map(d =>
+        ([formatDate(d.dateLastCheckState, 'dd/MM/yyyy, HH:mm:ss', "en-US"), d.temperature])
       );
-      console.log(this.data );
-      console.log(data);
-
+      this.dataHumidity = data.map(d =>
+        ([formatDate(d.dateLastCheckState, 'dd/MM/yyyy, HH:mm:ss', "en-US"), d.humidity])
+      );
     })
   }
 }
