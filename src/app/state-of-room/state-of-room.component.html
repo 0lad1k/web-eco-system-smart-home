@@ -7,6 +7,16 @@
   <mat-card-title>Остання виміряна вологість:</mat-card-title>
   <mat-card-subtitle>{{roomInfo?.humidity}}</mat-card-subtitle>
 </mat-card>
+<br>
+<mat-card>
+  <mat-card-title>Останній виміряний тиск:</mat-card-title>
+  <mat-card-subtitle>{{roomInfo?.pressure}}</mat-card-subtitle>
+</mat-card>
+<br>
+<mat-card>
+  <mat-card-title>Остання виміряна освітленість:</mat-card-title>
+  <mat-card-subtitle>{{roomInfo?.luminosity}}</mat-card-subtitle>
+</mat-card>
 
 <google-chart *ngIf="dataTemperature" #chart
               [title]="titleTemperature"
@@ -25,3 +35,23 @@
               [width]="width"
               [height]="height">
 </google-chart>
+
+<google-chart *ngIf="dataPressure" #chart
+              [title]="titlePressure"
+              [type]="type"
+              [data]="dataPressure"
+              [options]="options"
+              [width]="width"
+              [height]="height">
+</google-chart>
+
+<google-chart *ngIf="dataLuminosity" #chart
+              [title]="titleLuminosity"
+              [type]="type"
+              [data]="dataLuminosity"
+              [options]="options"
+              [width]="width"
+              [height]="height">
+</google-chart>
+
+
