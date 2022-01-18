@@ -6,6 +6,8 @@ export interface roomInfoData {
   humidity: number,
   temperature: number,
   dateLastCheckState:string
+  luminosity: number,
+  pressure: number,
 }
 
 /**
@@ -22,9 +24,13 @@ export class StateOfRoomComponent implements OnInit {
 
   roomInfo: roomInfoData| undefined;
   GraphTypo: any;
+  dataLuminosity: any;
+  dataPressure: any;
   dataTemperature: any;
   dataHumidity : any;
   options: any;
+  titleLuminosity: string;
+  titlePressure: string;
   titleTemperature: string;
   titleHumidity: string;
   type: any;
@@ -38,6 +44,8 @@ export class StateOfRoomComponent implements OnInit {
     };
     this.titleTemperature ="Температура в кімнаті";
     this.titleHumidity = "Вологість в кімнаті"
+    this.titlePressure = "Тиск в кімнаті"
+    this.titleLuminosity = "Освітленість в кімнаті в кімнаті"
     this.type ='ColumnChart';
     this.columnNames = ['Date', 'Temperature'];
     this.width = 500;
@@ -55,6 +63,12 @@ export class StateOfRoomComponent implements OnInit {
       );
       this.dataHumidity = data.map(d =>
         ([formatDate(d.dateLastCheckState, 'dd/MM/yyyy, HH:mm:ss', "en-US"), d.humidity])
+      );
+      this.dataLuminosity = data.map(d =>
+        ([formatDate(d.dateLastCheckState, 'dd/MM/yyyy, HH:mm:ss', "en-US"), d.luminosity])
+      );
+      this.dataPressure = data.map(d =>
+        ([formatDate(d.dateLastCheckState, 'dd/MM/yyyy, HH:mm:ss', "en-US"), d.pressure])
       );
     })
   }
