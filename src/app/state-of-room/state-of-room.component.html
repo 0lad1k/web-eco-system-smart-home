@@ -1,57 +1,63 @@
-<mat-card>
-  <mat-card-title>Остання виміряна температура:</mat-card-title>
-  <mat-card-subtitle>{{roomInfo?.temperature}}</mat-card-subtitle>
-</mat-card>
-<br>
-<mat-card>
-  <mat-card-title>Остання виміряна вологість:</mat-card-title>
-  <mat-card-subtitle>{{roomInfo?.humidity}}</mat-card-subtitle>
-</mat-card>
-<br>
-<mat-card>
-  <mat-card-title>Останній виміряний тиск:</mat-card-title>
-  <mat-card-subtitle>{{roomInfo?.pressure}}</mat-card-subtitle>
-</mat-card>
-<br>
-<mat-card>
-  <mat-card-title>Остання виміряна освітленість:</mat-card-title>
-  <mat-card-subtitle>{{roomInfo?.luminosity}}</mat-card-subtitle>
-</mat-card>
+<div class="all">
+  <div class="conteiner">
+    <mat-card>
+      <mat-card-title>Остання виміряна температура:</mat-card-title>
+      <mat-card-subtitle>{{roomInfo?.temperature}}°C</mat-card-subtitle>
+    </mat-card>
 
-<google-chart *ngIf="dataTemperature" #chart
-              [title]="titleTemperature"
-              [type]="type"
-              [data]="dataTemperature"
-              [options]="options"
-              [width]="width"
-              [height]="height">
-</google-chart>
+    <mat-card>
+      <mat-card-title>Остання виміряна вологість:</mat-card-title>
+      <mat-card-subtitle>{{roomInfo?.humidity}}%</mat-card-subtitle>
+    </mat-card>
+    <mat-card>
+      <mat-card-title>Останній виміряний тиск:</mat-card-title>
+      <mat-card-subtitle>{{roomInfo?.pressure}} гПа</mat-card-subtitle>
+    </mat-card>
 
-<google-chart *ngIf="dataHumidity" #chart
-              [title]="titleHumidity"
-              [type]="type"
-              [data]="dataHumidity"
-              [options]="options"
-              [width]="width"
-              [height]="height">
-</google-chart>
+    <mat-card>
+      <mat-card-title>Остання виміряна освітленість:</mat-card-title>
+      <mat-card-subtitle>{{roomInfo?.luminosity}} лк</mat-card-subtitle>
+    </mat-card>
+  </div>
 
-<google-chart *ngIf="dataPressure" #chart
-              [title]="titlePressure"
-              [type]="type"
-              [data]="dataPressure"
-              [options]="options"
-              [width]="width"
-              [height]="height">
-</google-chart>
+  <div class="graphs">
+    <google-chart *ngIf="dataTemperature" #chart
+                  [title]="titleTemperature"
+                  [type]="type"
+                  [data]="dataTemperature"
+                  [options]="options"
+                  [width]="width"
+                  [height]="height">
+    </google-chart>
 
-<google-chart *ngIf="dataLuminosity" #chart
-              [title]="titleLuminosity"
-              [type]="type"
-              [data]="dataLuminosity"
-              [options]="options"
-              [width]="width"
-              [height]="height">
-</google-chart>
+    <google-chart *ngIf="dataHumidity" #chart
+                  [title]="titleHumidity"
+                  [type]="type"
+                  [data]="dataHumidity"
+                  [options]="options"
+                  [width]="width"
+                  [height]="height">
+    </google-chart>
 
+    <google-chart *ngIf="dataPressure" #chart
+                  [title]="titlePressure"
+                  [type]="type"
+                  [data]="dataPressure"
+                  [options]="options"
+                  [width]="width"
+                  [height]="height">
+    </google-chart>
 
+    <google-chart *ngIf="dataLuminosity" #chart
+                  [title]="titleLuminosity"
+                  [type]="type"
+                  [data]="dataLuminosity"
+                  [options]="options"
+                  [width]="width"
+                  [height]="height">
+    </google-chart>
+  </div>
+  <footer>
+    <p>E-Mail: <a href="mailto:ecosystemsmarthome@gmail.com">ecosystemsmarthome@gmail.com</a></p>
+  </footer>
+</div>
