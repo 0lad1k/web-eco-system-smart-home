@@ -57,7 +57,7 @@ export class StateOfRoomComponent implements OnInit {
       this.roomInfo = data;
     })
 
-    this.http.get<roomInfoData[]>('https://ecosystem-smart-home.herokuapp.com/Room%D0%A1ondition/GetRoomStatistic').subscribe(data => {
+    this.http.get<roomInfoData[]>('https://ecosystem-smart-home.herokuapp.com/Room%D0%A1ondition/GetRoomStatisticByWeek').subscribe(data => {
       this.dataTemperature = data.map(d =>
         ([formatDate(d.dateLastCheckState, 'dd/MM/yyyy, HH:mm:ss', "en-US"), d.temperature])
       );
