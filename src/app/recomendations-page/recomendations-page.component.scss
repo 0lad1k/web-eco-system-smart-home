@@ -101,13 +101,14 @@ section
 footer 
 {
   display: flex;
-  justify-content: right;
+  flex-flow: row wrap;
   background-color: #673ab7;
   color: #fff;
-  padding: 0 16px;
+  padding: 0 24px;
   align-items: center;
   height: 64px;
   font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+  justify-content: space-between;
 
 }
 
@@ -115,6 +116,11 @@ footer a
 {
   text-decoration: none;
   color: #fff;
-  padding: 8px;
   text-decoration: underline;
+  font-size: 15px;
+}
+
+footer p 
+{
+  font-size: 15px;
 }
