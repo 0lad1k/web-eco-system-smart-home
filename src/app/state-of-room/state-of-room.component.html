@@ -1,5 +1,6 @@
 <div class="all">
   <div class="conteiner">
+
     <mat-card>
       <mat-card-title>Остання виміряна температура:</mat-card-title>
       <mat-card-subtitle>{{roomInfo?.temperature}}°C</mat-card-subtitle>
@@ -20,44 +21,15 @@
     </mat-card>
   </div>
 
-  <div class="graphs">
-    <google-chart *ngIf="dataTemperature" #chart
-                  [title]="titleTemperature"
-                  [type]="type"
-                  [data]="dataTemperature"
-                  [options]="options"
-                  [width]="width"
-                  [height]="height">
-    </google-chart>
+  <mat-tab-group mat-align-tabs="center"> #tabRef>
+    <mat-tab label="Статистика за сьогодні"><app-room-state-chart [api]='GetRoomStatisticToday'></app-room-state-chart></mat-tab>
+    <mat-tab label="Cтатистика за минулі 7 днів"><app-room-state-chart [api]='GetRoomStatisticByWeek'></app-room-state-chart></mat-tab>
+    <mat-tab label="Статистика за поточний місяць"><app-room-state-chart [api]='GetRoomStatisticByCurrentMonth'></app-room-state-chart></mat-tab>
+  </mat-tab-group>
 
-    <google-chart *ngIf="dataHumidity" #chart
-                  [title]="titleHumidity"
-                  [type]="type"
-                  [data]="dataHumidity"
-                  [options]="options"
-                  [width]="width"
-                  [height]="height">
-    </google-chart>
 
-    <google-chart *ngIf="dataPressure" #chart
-                  [title]="titlePressure"
-                  [type]="type"
-                  [data]="dataPressure"
-                  [options]="options"
-                  [width]="width"
-                  [height]="height">
-    </google-chart>
-
-    <google-chart *ngIf="dataLuminosity" #chart
-                  [title]="titleLuminosity"
-                  [type]="type"
-                  [data]="dataLuminosity"
-                  [options]="options"
-                  [width]="width"
-                  [height]="height">
-    </google-chart>
-  </div>
   <footer>
     <p>E-Mail: <a href="mailto:ecosystemsmarthome@gmail.com">ecosystemsmarthome@gmail.com</a></p>
   </footer>
 </div>
+

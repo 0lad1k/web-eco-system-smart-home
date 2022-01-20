@@ -32,32 +32,23 @@ mat-card
   margin: 15px;
   margin-top: 0;
 }
-
-footer
+.graphs
 {
-  display: flex;
-  justify-content: right;
+  margin: 0 auto;
+  text-align: center;
+
+}
+.graphs:after
+{
+  content: "";
+  display: block;
+  width: 80%;
+  height: 5px;
   background-color: #673ab7;
-  color: #fff;
-  padding: 0 24px;
-  margin-top: 30px;
-  align-items: center;
-  height: 64px;
-  font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
-
+  margin: 16px auto;
 }
-
-footer a
+google-chart
 {
-  text-decoration: none;
-  color: #fff;
-  text-decoration: underline;
-  font-size: 15px;
+  display: block;
+  display: inline-block;
 }
-
-footer p
-{
-  font-size: 15px;
-}
-
-

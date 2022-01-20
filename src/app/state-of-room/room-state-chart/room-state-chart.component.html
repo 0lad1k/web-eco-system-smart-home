@@ -1,0 +1,37 @@
+<div class="graphs">
+  <google-chart *ngIf="dataTemperature"
+                [title]="titleTemperature"
+                [type]="type"
+                [data]="dataTemperature"
+                [options]="options"
+                [width]="width"
+                [height]="height">
+  </google-chart>
+
+  <google-chart *ngIf="dataHumidity"
+                [title]="titleHumidity"
+                [type]="type"
+                [data]="dataHumidity"
+                [options]="options"
+                [width]="width"
+                [height]="height">
+  </google-chart>
+
+  <google-chart *ngIf="dataPressure"
+                [title]="titlePressure"
+                [type]="type"
+                [data]="dataPressure"
+                [options]="options"
+                [width]="width"
+                [height]="height">
+  </google-chart>
+
+  <google-chart *ngIf="dataLuminosity" #chart
+                [title]="titleLuminosity"
+                [type]="type"
+                [data]="dataLuminosity"
+                [options]="options"
+                [width]="width"
+                [height]="height">
+  </google-chart>
+</div>

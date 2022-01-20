@@ -11,6 +11,9 @@ import {HttpClientModule} from "@angular/common/http";
 import { StateOfRoomComponent } from './state-of-room/state-of-room.component';
 import {MatCardModule} from "@angular/material/card";
 import {GoogleChartsModule} from "angular-google-charts";
+import {MatTabsModule} from "@angular/material/tabs";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { RoomStateChartComponent } from './state-of-room/room-state-chart/room-state-chart.component';
 
 const appRoutes: Routes =[
   { path: 'recomendations', component: RecomendationsPageComponent},
@@ -22,10 +25,12 @@ const appRoutes: Routes =[
     AppComponent,
     ToolbarHederComponent,
     RecomendationsPageComponent,
-    StateOfRoomComponent
+    StateOfRoomComponent,
+    RoomStateChartComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     GoogleChartsModule,
     MatToolbarModule,
     AppRoutingModule,
@@ -36,6 +41,7 @@ const appRoutes: Routes =[
       {path: 'state-of-room', component: StateOfRoomComponent}
     ]),
     MatCardModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
