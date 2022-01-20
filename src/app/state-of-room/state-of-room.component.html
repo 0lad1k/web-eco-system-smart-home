@@ -22,7 +22,7 @@
   </div>
 
   <mat-tab-group mat-align-tabs="center"> #tabRef>
-    <mat-tab label="Tab 2">Content 2</mat-tab>
+    <mat-tab label="Статистика за сьогодні"><app-room-state-chart [api]='GetRoomStatisticToday'></app-room-state-chart></mat-tab>
     <mat-tab label="Cтатистика за минулі 7 днів"><app-room-state-chart [api]='GetRoomStatisticByWeek'></app-room-state-chart></mat-tab>
     <mat-tab label="Статистика за поточний місяць"><app-room-state-chart [api]='GetRoomStatisticByCurrentMonth'></app-room-state-chart></mat-tab>
   </mat-tab-group>

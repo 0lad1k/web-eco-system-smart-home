@@ -20,11 +20,13 @@ export interface roomInfoData {
 
 export class StateOfRoomComponent implements OnInit {
   roomInfo: roomInfoData| undefined;
+  GetRoomStatisticToday:string;
   GetRoomStatisticByCurrentMonth: string;
   GetRoomStatisticByWeek: string;
   constructor(private http: HttpClient) {
     this.GetRoomStatisticByCurrentMonth = "GetRoomStatisticByCurrentMonth";
-    this.GetRoomStatisticByWeek = "GetRoomStatisticByWeek"
+    this.GetRoomStatisticByWeek = "GetRoomStatisticByWeek";
+    this.GetRoomStatisticToday ="GetRoomStatisticToday";
   }
 
   ngOnInit() {
