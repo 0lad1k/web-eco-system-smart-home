@@ -1,5 +1,5 @@
 <div class="graphs">
-  <google-chart *ngIf="dataTemperature" #chart
+  <google-chart *ngIf="dataTemperature"
                 [title]="titleTemperature"
                 [type]="type"
                 [data]="dataTemperature"
@@ -8,7 +8,7 @@
                 [height]="height">
   </google-chart>
 
-  <google-chart *ngIf="dataHumidity" #chart
+  <google-chart *ngIf="dataHumidity"
                 [title]="titleHumidity"
                 [type]="type"
                 [data]="dataHumidity"
@@ -17,7 +17,7 @@
                 [height]="height">
   </google-chart>
 
-  <google-chart *ngIf="dataPressure" #chart
+  <google-chart *ngIf="dataPressure"
                 [title]="titlePressure"
                 [type]="type"
                 [data]="dataPressure"
