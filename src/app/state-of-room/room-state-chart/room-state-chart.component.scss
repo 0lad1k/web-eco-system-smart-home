@@ -1,0 +1,54 @@
+.conteiner
+{
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 32px;
+  text-align: center;
+}
+.conteiner:after
+{
+  content: "";
+  display: block;
+  width: 80%;
+  height: 5px;
+  background-color: #673ab7;
+  margin: 16px auto;
+}
+.all
+{
+  padding-bottom: 30px;
+  text-align: center;
+}
+mat-card-title
+{
+  font-weight: bold;
+}
+mat-card
+{
+  background-color: darkgray;
+  width: 250px;
+  text-align: center;
+  display: inline-block;
+  margin: 15px;
+  margin-top: 0;
+}
+.graphs
+{
+  margin: 0 auto;
+  text-align: center;
+
+}
+.graphs:after
+{
+  content: "";
+  display: block;
+  width: 80%;
+  height: 5px;
+  background-color: #673ab7;
+  margin: 16px auto;
+}
+google-chart
+{
+  display: block;
+  display: inline-block;
+}

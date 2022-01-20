@@ -1,5 +1,12 @@
+<mat-tab-group #tabRef>
+  <mat-tab label="Tab 1"><app-room-state-chart [api]='GetRoomStatisticByCurrentMonth'></app-room-state-chart></mat-tab>
+  <mat-tab label="Tab 2">Content 2</mat-tab>
+  <mat-tab label="Tab 3">Content 3</mat-tab>
+</mat-tab-group>
+
 <div class="all">
   <div class="conteiner">
+
     <mat-card>
       <mat-card-title>Остання виміряна температура:</mat-card-title>
       <mat-card-subtitle>{{roomInfo?.temperature}}°C</mat-card-subtitle>
