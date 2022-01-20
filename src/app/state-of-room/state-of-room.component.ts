@@ -37,11 +37,13 @@ export class StateOfRoomComponent implements OnInit {
   columnNames: any;
   width: any;
   height: any;
+  GetRoomStatisticByCurrentMonth: string;
   constructor(private http: HttpClient) {
     this.GraphTypo = "PieChart"
     this.options = {
       colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'], is3D: true
     };
+    this.GetRoomStatisticByCurrentMonth = "GetRoomStatisticByCurrentMonth";
     this.titleTemperature ="Температура в кімнаті";
     this.titleHumidity = "Вологість в кімнаті"
     this.titlePressure = "Тиск в кімнаті"
