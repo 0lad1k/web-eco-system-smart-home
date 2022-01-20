@@ -39,7 +39,7 @@ export class RoomStateChartComponent implements OnInit {
     this.titleHumidity = "Вологість в кімнаті"
     this.titlePressure = "Тиск в кімнаті"
     this.titleLuminosity = "Освітленість в кімнаті в кімнаті"
-    this.type ='ColumnChart';
+    this.type ='AreaChart';
     this.columnNames = ['Date', 'Temperature'];
     this.width = 500;
     this.height = 500;

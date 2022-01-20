@@ -1,25 +1,3 @@
-<div class="conteiner">
-
-  <mat-card>
-    <mat-card-title>Остання виміряна температура:</mat-card-title>
-    <mat-card-subtitle>{{roomInfo?.temperature}}°C</mat-card-subtitle>
-  </mat-card>
-
-  <mat-card>
-    <mat-card-title>Остання виміряна вологість:</mat-card-title>
-    <mat-card-subtitle>{{roomInfo?.humidity}}%</mat-card-subtitle>
-  </mat-card>
-  <mat-card>
-    <mat-card-title>Останній виміряний тиск:</mat-card-title>
-    <mat-card-subtitle>{{roomInfo?.pressure}} гПа</mat-card-subtitle>
-  </mat-card>
-
-  <mat-card>
-    <mat-card-title>Остання виміряна освітленість:</mat-card-title>
-    <mat-card-subtitle>{{roomInfo?.luminosity}} лк</mat-card-subtitle>
-  </mat-card>
-</div>
-
 <div class="graphs">
   <google-chart *ngIf="dataTemperature" #chart
                 [title]="titleTemperature"
