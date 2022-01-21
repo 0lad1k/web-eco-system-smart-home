@@ -1,8 +1,5 @@
 <div class="graphs">
-  <div class="error" *ngIf="dataTemperature.length == 0">
-    Дані за вказаний період відсутні
-  </div>
-  <google-chart *ngIf="dataTemperature.length > 0"
+  <google-chart *ngIf="dataTemperature"
                 [title]="titleTemperature"
                 [type]="type"
                 [data]="dataTemperature"
@@ -11,8 +8,7 @@
                 [height]="height">
   </google-chart>
 
-
-  <google-chart *ngIf="dataHumidity.length > 0"
+  <google-chart *ngIf="dataHumidity"
                 [title]="titleHumidity"
                 [type]="type"
                 [data]="dataHumidity"
@@ -21,7 +17,7 @@
                 [height]="height">
   </google-chart>
 
-  <google-chart *ngIf="dataPressure.length > 0"
+  <google-chart *ngIf="dataPressure"
                 [title]="titlePressure"
                 [type]="type"
                 [data]="dataPressure"
@@ -30,7 +26,7 @@
                 [height]="height">
   </google-chart>
 
-  <google-chart *ngIf="dataLuminosity.length > 0" #chart
+  <google-chart *ngIf="dataLuminosity" #chart
                 [title]="titleLuminosity"
                 [type]="type"
                 [data]="dataLuminosity"
