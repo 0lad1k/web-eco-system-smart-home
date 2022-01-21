@@ -1,4 +1,7 @@
 <div class="graphs">
+  <div class="error" *ngIf="dataTemperature.length == 0">
+    Дані за вказаний період відсутні
+  </div>
   <google-chart *ngIf="dataTemperature"
                 [title]="titleTemperature"
                 [type]="type"
