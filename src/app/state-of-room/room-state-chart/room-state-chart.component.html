@@ -1,4 +1,4 @@
-<div class="graphs">
+<div class="graphs"  *ngIf="dataTemperature">
   <div class="error" *ngIf="dataTemperature.length == 0">
     Дані за вказаний період відсутні
   </div>
@@ -37,4 +37,9 @@
                 [width]="width"
                 [height]="height">
   </google-chart>
+</div>
+
+
+<div class="error" *ngIf="!dataTemperature">
+  Не вдалось завантажити дані
 </div>
