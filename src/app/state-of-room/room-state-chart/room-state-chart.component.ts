@@ -2,7 +2,6 @@ import {Component, Input, OnInit} from '@angular/core';
 import {roomInfoData} from "../state-of-room.component";
 import {formatDate} from "@angular/common";
 import {HttpClient} from "@angular/common/http";
-
 @Component({
   selector: 'app-room-state-chart',
   templateUrl: './room-state-chart.component.html',
@@ -12,6 +11,7 @@ export class RoomStateChartComponent implements OnInit {
 
   @Input()
   api: string = '';
+
 
 
   roomInfo: roomInfoData| undefined;
