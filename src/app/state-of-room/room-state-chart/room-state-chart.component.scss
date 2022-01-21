@@ -52,3 +52,18 @@ google-chart
   display: block;
   display: inline-block;
 }
+
+
+.error
+{
+  border-radius: 4px;
+  margin-top: 16px !important;
+  margin:0 auto;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  align-items: center;
+  color: white;
+  background-color: #B00020;
+  height: 32px;
+}
