@@ -14,6 +14,8 @@ import {GoogleChartsModule} from "angular-google-charts";
 import {MatTabsModule} from "@angular/material/tabs";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { RoomStateChartComponent } from './state-of-room/room-state-chart/room-state-chart.component';
+import { FooterComponent } from './footer/footer.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 const appRoutes: Routes =[
   { path: 'recomendations', component: RecomendationsPageComponent},
@@ -27,6 +29,8 @@ const appRoutes: Routes =[
     RecomendationsPageComponent,
     StateOfRoomComponent,
     RoomStateChartComponent,
+    FooterComponent,
+    AboutUsComponent,
   ],
   imports: [
     BrowserModule,

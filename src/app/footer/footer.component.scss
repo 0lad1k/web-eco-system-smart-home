@@ -1,0 +1,25 @@
+footer
+{
+  display: flex;
+  justify-content: center;
+  background-color: #673ab7;
+  color: #fff;
+  padding: 0 24px;
+  align-items: center;
+  height: 70px;
+  font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+
+}
+
+footer a
+{
+  text-decoration: none;
+  color: #fff;
+  text-decoration: underline;
+  font-size: 15px;
+}
+
+footer p
+{
+  font-size: 15px;
+}
