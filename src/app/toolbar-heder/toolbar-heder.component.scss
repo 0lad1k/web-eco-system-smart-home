@@ -5,6 +5,11 @@ a {
   padding: 8px;
   color: white;
   text-decoration: none;
+  &:hover
+  {
+    text-decoration: underline;
+    text-shadow: 0 0 2px white;
+  }
 }
 
 .pr0

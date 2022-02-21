@@ -19,7 +19,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 
 const appRoutes: Routes =[
   { path: 'recomendations', component: RecomendationsPageComponent},
-  {path: 'state-of-room', component: StateOfRoomComponent}
+  {path: 'state-of-room', component: StateOfRoomComponent},
+  {path: '', component: AboutUsComponent}
 ];
 
 @NgModule({
@@ -42,7 +43,8 @@ const appRoutes: Routes =[
     BrowserModule,
     RouterModule.forRoot([
       {path: 'recomendations', component: RecomendationsPageComponent},
-      {path: 'state-of-room', component: StateOfRoomComponent}
+      {path: 'state-of-room', component: StateOfRoomComponent},
+      {path: '', component: AboutUsComponent}
     ]),
     MatCardModule,
     MatTabsModule

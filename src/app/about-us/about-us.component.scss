@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+.conteiner
+{
+    font-family: 'Ubuntu', sans-serif;
+    min-height: calc(100vh - 167px);
+}
+
+.title
+{
+    margin: 32px auto 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 56px;
+    color: #353131;
+    border-bottom: 5px solid #673ab7;
+    padding: 0 0 40px 0;
+    h1
+    {
+        font-weight: 700;
+    }
+}
+
+.text
+{
+    margin: 60px auto 80px auto;
+    max-width: 950px;
+    font-size: 18px;
+    color: #353131;
+    line-height: 1.5;
+    .span1
+    {
+        font-size: 26px;
+    }
+}
+
+.photo
+{
+    margin: 36px auto 36px auto;
+    background: url("https://cdu.edu.ua/images/oformlennia/gerbu/0001.jpg") center/cover no-repeat;
+    width: 100%;
+    max-width: 750px;
+    height: 450px;
+}
+
+.photo2
+{
+    margin: 36px auto 36px auto;
+    background: url("https://cs8.pikabu.ru/post_img/big/2016/12/15/0/1481750250140945554.jpg") center/cover no-repeat;
+    width: 100%;
+    max-width: 650px;
+    height: 400px;
+}
+
+.photo3
+{
+    margin: 36px auto 36px auto;
+    background: url("https://repository.kristti.com.ua/wp-content/themes/repa/img/img/nopicture.png") center/cover no-repeat;
+    width: 100%;
+    max-width: 750px;
+    height: 450px;
+}
+
+.photo4-5
+{
+    display: flex;
+}
+
+.photo4
+{
+    margin: 36px 36px 36px auto;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Arduino_Logo.svg/1200px-Arduino_Logo.svg.png") center/contain no-repeat;
+    width: 100%;
+    max-width: 250px;
+    height: 300px;
+}
+
+.photo5
+{
+    margin: 36px auto 36px 36px;
+    background: url("https://ltdfoto.ru/images/pngegg-removebg-preview.png") center/contain no-repeat;
+    width: 100%;
+    max-width: 250px;
+    height: 300px;
+}
+
+.span2
+{
+    color: #673ab7;
+    font-size: 22px;
+}
